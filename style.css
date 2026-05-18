@@ -1,0 +1,132 @@
+
+    
+
+/* --- SLIDING SIDEBAR (Fixed & Hidden to Right) --- */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -300px; /* Securely hides it off-screen to the right */
+      width: 250px;
+      height: 100vh;
+      background-color:transparent; 
+      padding: 80px 25px 25px 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+      z-index: 2000; /* Sits above everything else */
+      transition: right 0.4s cubic-bezier(0.1, 0.8, 0.3, 1);
+    }
+
+    /* Toggle visibility class via JS */
+    .sidebar.active {
+      right: 0; 
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 35px;
+      color: #a0aec0;
+      background: none;
+      border: none;
+      
+    }
+
+    /* --- SIDEBAR NAVIGATION LINKS --- */
+    .sidebar-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar-links a {
+      text-decoration: none;
+      color: #a0aec0;
+      font-size: 18px;
+      font-weight: 600;
+      display: block;
+      padding: 12px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar-links a:hover,
+    .sidebar-links a.active {
+      color: #ffffff;
+      background: rgba(0, 242, 254, 0.15);
+      border-left: 4px solid #00f2fe;
+    }
+
+    /* --- BACKGROUND OVERLAY --- */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1500;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* --- MAIN PAGE CONTENT CONTAINER --- */
+    .content {
+      padding: 20px 25px 120px 25px; /* Bottom padding protects view from bottom navigation bar */
+    }
+
+    .main-content h1 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .main-content p {
+      color: #a0aec0;
+      line-height: 1.5;
+    }
+
+    /* --- MOBILE BOTTOM NAVIGATION --- */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 65px;
+      background: #1e293b;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      z-index: 1000;
+      padding-bottom: 5px;
+    }
+
+    .nav-item {
+      color: #94a3b8;
+      font-size: 11px;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-item.active {
+      color: #00f2fe;
+    }
+
+    .nav-icon {
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+
