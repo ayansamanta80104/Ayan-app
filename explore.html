@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYAN | Explore</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="body.css">
+  <link rel="stylesheet" href="menubtn.css">
+  <link rel="stylesheet" href="scroll.css">
+  <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+
+  <!-- Top Header Section -->
+  <div class="header">
+    <div class="logo-container">
+        <span class="logo-text">AYAN</span>
+    </div>
+    <button class="open-btn" id="openBtn">☰</button>
+  </div>
+
+  <!-- Sliding Sidebar Drawer -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn">×</button>
+    <div class="logo-container"><span class="logo-text">AYAN</span></div>
+    <ul class="sidebar-links">
+      <li><a href="t.html">🏠 Home</a></li>
+      <li><a href="profile.html">👤 About</a></li>
+      <li><a href="explore.html" class="active">🔍 Explore</a></li>
+      <li><a href="s.html">💻 Projects</a></li>
+      <li><a href="connect.html">📞 Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Dark Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main Explore Viewport -->
+  <div class="content">
+    <div class="main-content">
+      
+      <div class="contact-intro scroll-animate">
+        <h1>Explore Tech Stack 🔍</h1>
+        <p>Click on any language card to view advanced structural information details.</p>
+      </div>
+
+      <!-- Grid Container for Tech Cards -->
+      <div class="app-features-container">
+        
+        <!-- HTML Card (Data attributes hold the details text) -->
+        <div class="feature-card scroll-animate tech-card" data-tech="HTML5" 
+             data-details="HTML (HyperText Markup Language) is the backbone of every website structure. It organizes text, embeds image mechanics, and maps links into hierarchical trees. Our app layout uses clean HTML5 semantic tags like headers, sections, and footers to optimize rendering performance.">
+          <div class="feature-icon">🌐</div>
+          <h3>HTML5 Structure</h3>
+          <p>The foundation structural layout blueprint of the internet web canvas.</p>
+        </div>
+
+        <!-- CSS3 Card -->
+        <div class="feature-card scroll-animate tech-card" data-tech="CSS3 Artistry" 
+             data-details="CSS (Cascading Style Sheets) controls presentation, responsive scaling grids, and visual animations. This app leverages modern CSS flex-tracks, grid structures, custom blur filters, and cubic-bezier transition matrixes to orchestrate a high-end interface without lagging the graphics hardware.">
+          <div class="feature-icon">🎨</div>
+          <h3>CSS3 Artistry</h3>
+          <p>Manages transparent glass layers, grid maps, and responsive parameters.</p>
+        </div>
+
+        <!-- JavaScript Card -->
+        <div class="feature-card scroll-animate tech-card" data-tech="JavaScript Logic" 
+             data-details="JavaScript injects core dynamic logic engine operations. It binds user gesture inputs, measures real-time scroll vectors, processes window intersection observers for reveal animations, and handles active modal pop-ups dynamically without requiring a full web page reload.">
+          <div class="feature-icon">⚡</div>
+          <h3>JavaScript Logic</h3>
+          <p>The programming core that computes scroll metrics, events, and clicks.</p>
+        </div>
+      <!-- php Card -->
+        <div class="feature-card scroll-animate tech-card" data-tech="PHP Server Logic" 
+               data-details="PHP handles backend server-side engine processing. It securely interacts with relational databases like MySQL, manages user authentication sessions, processes form submissions, dynamically constructs HTML templates before sending them to the browser, and routes server API requests smoothly.">
+        <div class="feature-icon">🐘</div>
+        <h3>PHP Server Logic</h3>
+        <p>The server-side language executing database actions, user sessions, and backend routing.</p>
+        </div>
+        <!--pythone-->
+        <div class="feature-card scroll-animate tech-card" data-tech="Python Backend" 
+           data-details="Python powers backend APIs, automation scripting, and microservices via modern frameworks like Django or Flask. It handles computationally heavy data processing tasks, integrates machine learning model endpoints, runs automated cron jobs, and serves structured JSON data arrays cleanly to front-end interfaces.">
+         <div class="feature-icon">🐍</div>
+        <h3>Python Backend</h3>
+       <p>The backend framework handler running APIs, complex logic, and automated data processing.</p>
+       </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Interactive Details Pop-up Modal Drawer Box
+       ========================================================================== -->
+  <div class="details-modal" id="detailsModal">
+    <button class="modal-close" id="modalCloseBtn">&times;</button>
+    <div class="modal-icon" id="modalIcon">🔮</div>
+    <h2 id="modalTitle">Topic Title</h2>
+    <p id="modalBody">Detailed text content will be inserted automatically by javascript here.</p>
+  </div>
+
+  <!-- Sticky Bottom Navigation Footer -->
+  <footer>
+     <nav class="bottom-nav">
+      <a href="t.html" class="nav-item"><span class="nav-icon">🏠</span>Home</a>
+      <a href="explore.html" class="nav-item active"><span class="nav-icon">🔍</span>Explore</a>
+      <a href="profile.html" class="nav-item"><span class="nav-icon">👤</span>Profile</a>
+       <a href="connect.html" class="nav-item">
+        <span class="nav-icon">📞</span>Contact
+      </a>
+      <a href="setting.html" class="nav-item"><span class="nav-icon">⚙️</span>Contact</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="scroll.js"></script>
+  <script src="explore.js"></script>
+</body>
+</html>
