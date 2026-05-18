@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>App Interface</title>
+</head>
+  <style>
+    :root {
+      --primary: #6366f1;
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f8fafc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* App Header */
+    .header {
+      padding: 60px 20px 20px;
+      background: linear-gradient(to bottom, rgba(30, 41, 59, 0.9), transparent);
+      text-align: left;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      background: linear-gradient(to right, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Scrollable Content Area */
+    .content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0 20px 100px; /* Space for bottom nav */
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Input Styling */
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    input:not([type="checkbox"]) {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 14px;
+      color: white;
+      font-size: 16px; /* Prevents iOS zoom */
+      transition: 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    /* Action Button */
+    .btn-main {
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 18px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-main:active {
+      transform: scale(0.97);
+    }
+
+    /* Bottom Navigation Bar */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      background: rgba(30, 41, 59, 0.8);
+      backdrop-filter: blur(15px);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-bottom: 20px; /* Safe area for iPhones */
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-item {
+      color: #94a3b8;
+      font-size: 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .nav-item.active {
+      color: var(--primary);
+    }
+
+    .nav-icon {
+      font-size: 20px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Success State */
+    #success-screen {
+      display: none;
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+<body>
+
+  <div class="header">
+    <h1>Project</h1>
+  </div>
+
+  <div class="content">
+    <div id="form-container" class="card">
+      <form id="form">
+        <div class="input-group">
+          <label>First Name</label>
+          <input type="text" name="First Name" placeholder="Enter name" required>
+        </div>
+
+        <div class="input-group">
+          <label>Surname</label>
+          <input type="text" name="Surname" placeholder="Enter surname">
+        </div>
+
+        <div class="input-group">
+          <label>Age</label>
+          <input type="number" name="number" placeholder="How old are you?" required>
+        </div>
+
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="email@gmail.com" required>
+        </div>
+
+        <button type="submit" class="btn-main">Update Profile</button>
+      </form>
+    </div>
+
+    <div id="success-screen">
+      <img src="https://plain-apac-prod-public.komododecks.com/202605/14/xsnKTdVMeLnZBz44BQIU/image.jpg" style="width:100%; border-radius:20px;">
+      <h2 style="margin-top:20px;">Success!</h2>
+      <p style="color:#94a3b8">Your profile has been updated.</p>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="t.html" class="nav-item">
+      <span class="nav-icon">🏠</span>Home
+    </a>
+    <a href="explore.html" class="nav-item">
+      <span class="nav-icon">🔍</span>Explore
+    </a>
+    
+    <a href="profile.html" class="nav-item">
+      <span class="nav-icon">👤</span>Profile
+    </a>
+    <a href="connect.html" class="nav-item">
+        <span class="nav-icon">📞</span>Contact
+      </a>
+    <a href="setting.html" class="nav-item">
+      <span class="nav-icon">⚙️</span>Settings
+    </a>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("MNmYrtPBDLwU0Zes1");
+
+    document.getElementById('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.btn-main');
+      btn.innerText = "Processing...";
+      
+      emailjs.sendForm('service_yo4u39h', 'template_xn31k1l', this)
+        .then(() => {
+          document.getElementById('form-container').style.display = 'none';
+          document.getElementById('success-screen').style.display = 'block';
+        });
+    });
+  </script>
+</body>
+</html>
