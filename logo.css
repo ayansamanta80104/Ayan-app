@@ -1,0 +1,20 @@
+/* --- AYAN LOGO STYLE --- */
+.logo-container {
+  text-align: center;
+}
+
+.logo-text {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  display: inline-block;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 3px solid #00f2fe;
+  line-height: 1.2;
+}
+
+
+
