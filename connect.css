@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Contact Page Glassmorphic Styling
+   ========================================================================== */
+
+.contact-intro {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.contact-intro h1 {
+  font-size: 2rem;
+  color: #00d2ff;
+}
+
+.contact-intro p {
+  color: #b3b3cc;
+}
+
+/* Glass Wrapper around the form */
+.form-container {
+  max-width: 550px;
+  margin: 0 auto 100px auto; /* Margin bottom keeps it from getting covered by footer */
+  width: 90%;
+}
+
+/* Vertical spacing for each label/input set */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  color: #00d2ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Transparent Dark Form Inputs */
+.input-group input,
+.input-group textarea {
+  background: rgba(20, 20, 35, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Placeholder text color */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Active Form Focus State: Dynamic Neon Glow */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #00d2ff;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.3);
+}
+
+/* Premium Gradient Interactive Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00d2ff, #0072ff);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  margin-top: 10px;
+}
+
+/* Button Hover State */
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+}
+
+/* Button Press Effect */
+.submit-btn:active {
+  transform: translateY(0);
+  }
