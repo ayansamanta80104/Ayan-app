@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayan App</title>
+  <!-- Combined or verified CSS Links -->
+  <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="body.css">
+  <link rel="stylesheet" href="menubtn.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="scroll.css">
+  <link rel="stylesheet" href="sscrol.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+   <header class="header">
+    <div class="logo-container">
+        <span class="logo-text">AYAN</span>
+    </div>
+    <button class="open-btn" id="openBtn" aria-label="Open Menu">☰</button>
+  </header>
+
+  <!-- Sliding Sidebar Drawer -->
+  <aside class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn" aria-label="Close Menu">×</button>
+    <div class="logo-container">
+      <span class="logo-text">AYAN</span>
+    </div>
+    <nav class="sidebar-links">
+      
+         <a href="t.html" class="active">🏠 Home</a>
+         <a href="profile.html">👤 About</a>
+         <a href="explore.html">🔍 Explore</a>
+        <a href="s.html">💻 Projects</a>
+        <a href="connect.html">📞 Contact</a>
+      
+    </nav>
+  </aside>
+
+  <!-- Dark Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main Scrolling Viewport Container -->
+  <main class="content">
+    <div class="main-content">  
+      
+      <!-- Static Content -->
+      <h1>Welcome to my site</h1>
+      <p>Click the menu button to slide open the navigation drawer.</p>
+      <br><br>
+      <div>
+        <p>Hello coders or users,<br>This a simple website with many html and css page and javascript</p>
+      </div>
+
+      <!-- Intro Header (Appears First on Scroll) -->
+      <div class="showcase-intro scroll-animate">
+       
+        <h1>🚀 My App Architecture</h1> <p>Scroll down to explore the core design mechanics of the interface.</p>
+      </div> <!-- The Main Feature Grid Container --> 
+      <div class="app-features-container">
+        <!-- Feature 1 --> 
+        <div class="feature-card scroll-animate">
+          <div class="feature-icon">📌</div> 
+          <h3>1. The Fixed Top Header & Branding</h3> 
+          <p>At the very top sits your fixed navigation bar.
+            <br> It displays your custom branding text 
+            <strong>"AYAN"</strong> prominently on the left,
+            keeping your identity visible at all times.<br> 
+            On the right side, it holds the sleek hamburger menu button (☰).<br>
+            This header is styled to stay pinned to the top of the screen <br>
+            while content slides underneath it, 
+            <br>acting as the anchor for your app's interface.
+            </p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-card scroll-animate">
+          <div class="feature-icon">🚪</div> 
+          <h3>2. The Sliding Sidebar Drawer & Dark Overlay</h3>
+          <p>When a user clicks the hamburger button, the app triggers a smooth, 
+            sliding drawer layout. The menu transitions gracefully from off-screen 
+            (left: -250px) to fully visible, containing clean navigation 
+            links to your Home, About, Projects, and Contact pages. 
+            Simultaneously, a semi-transparent dark background overlay fades in over your main content,<br>
+            blurring the background slightly to keep the user focused purely on your menu options.</p>
+        </div> 
+        <!-- Feature 3 --> 
+        <div class="feature-card scroll-animate"> 
+          <div class="feature-icon">✨</div>
+          <h3>3. The Scroll-to-Appear Main Content</h3>
+          <p>As users explore your main page content, 
+            <br>elements don't just sit there static—they dynamically wake up.
+            <br>By utilizing an automatic visibility observer, text blocks, headers,
+            and container boxes stay hidden and slightly lowered by default.<br> 
+            The moment a user scrolls down and an item enters the screen view,
+            it smoothly slides upward and fades in, creating a high-end, 
+            interactive narrative feel.</p>
+        </div>
+        <!-- Feature 4 --> 
+        <div class="feature-card scroll-animate"> 
+          <div class="feature-icon">🔔</div>
+          <h3>4. The Smart Scroll-Up Alert Box</h3>
+          <p>If a user decides to change direction and scroll back upwards,
+            <br>the app responds intelligently. 
+            <br>A custom floating topic box hidden right beneath the header 
+            snaps down into view with a playful, springy bounce animation.
+            <br> This temporary alert card is the perfect spot to pitch specific highlights—like 
+            a featured app update, a profile spotlight, or a new project announcement—disappearing quietly
+            the moment they resume scrolling down.</p> 
+        </div>
+        <!-- Feature 5 --> 
+        <div class="feature-card scroll-animate"> 
+          <div class="feature-icon">📱</div>
+          <h3>5. The Mobile Bottom Navigation Bar</h3> 
+          <p>To maximize responsiveness on smaller mobile devices,
+            <br>your layout includes a sticky bottom navigation menu.
+            <br> Complete with distinct icons for Home, Explore, Profile,
+            and Settings,<br> this bar gives the application a native,
+            thumb-friendly app feel.<br> 
+            It features a distinct "active" state design that instantly tells users exactly<br>
+            which section of your application they are currently viewing.</p> 
+        </div> </div> <!-- End of Grid Container --> </div> </div>
+  <div class="form-container scroll-animate"> <!-- Your form content goes here --> </div> 
+  <!-- Extra dummy space to let you test the scroll features --> 
+  <div style="margin-top: 600px;" class="scroll-animate"> 
+    <h2>More Content Appears!</h2>
+          <p>This smoothly faded in as you scrolled down the page.</p>
+      </div>
+
+    </div> <!-- End of main-content -->
+  </main> <!-- End of content -->
+
+  <!-- Footer Navigation -->
+  <footer>
+     <nav class="bottom-nav">
+      <a href="t.html" class="nav-item">
+        <span class="nav-icon" class="nav-item active">🏠</span>Home
+      </a>
+      <a href="explore.html" class="nav-item">
+        <span class="nav-icon">🔍</span>Explore
+      </a>
+      <a href="profile.html" class="nav-item">
+        <span class="nav-icon">👤</span>Profile
+      </a>
+      <a href="connect.html" class="nav-item">
+        <span class="nav-icon">📞</span>Contact
+      </a>
+      <a href="setting.html" class="nav-item">
+        <span class="nav-icon">⚙️</span>Settings
+      </a>
+    </nav>
+  </footer>
+
+  <!-- Scripts Layout -->
+  <script src="script.js"></script>
+  <script src="scroll.js"></script>
+  <script src="sscrol.js"></script>
+
+</body>
+           </html>
