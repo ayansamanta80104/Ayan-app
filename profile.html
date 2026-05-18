@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayan Samanta - Profile</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="body.css">
+  <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="menubtn.css">
+</head>
+<body>
+
+  <header class="header navbar">
+    <div class="logo-container">
+      <span class="logo-text">AYAN</span>
+    </div>
+    <button class="open-btn" id="openBtn" aria-label="Open Navigation Drawer Menu">☰</button>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn" aria-label="Close Navigation Menu">×</button>
+
+    <div class="logo-container">
+      <span class="logo-text">AYAN</span>
+    </div>
+
+    <ul class="sidebar-links">
+      <li><a href="t.html">🏠 Home</a></li>
+      <li><a href="profile.html" class="active">👤 About</a></li>
+      <li><a href="s.html">💻 Projects</a></li>
+      <li><a href="explore.html">🔍 Explore</a></li>
+      <li><a href="connect.html">📞 Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <main class="content">
+    <div class="profile-container">
+      
+      <div class="profile-header">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <div id="displayInitials" class="avatar-circle">AS</div>
+        <h1 id="displayName" class="profile-name">Ayan Samanta</h1>
+        <p class="profile-tagline">Web Developer & Programmer</p>
+      </div>
+
+      <div class="profile-body">
+        <h2>Personal Information</h2>
+        <hr class="divider">
+        
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">Full Name:</span>
+            <span id="displayFullName" class="value">Ayan Samanta</span>
+          </div>
+          
+          <div class="info-item">
+            <span class="label">Father's Name:</span>
+            <span id="displayFatherName" class="value">Tapas Samanta</span>
+          </div>
+
+          <div class="info-item">
+            <span class="label">Brother's Name:</span>
+            <span id="displayBrotherName" class="value">Anku Samanta</span>
+          </div>
+
+          <div class="info-item">
+            <span class="label">Address / House:</span>
+            <span id="displayHouse" class="value">Prajabar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-footer">
+        <button class="edit-btn" onclick="openEditModal()">Edit Profile</button>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="editModal">
+      <div class="modal-box">
+        <h3>Edit Your Profile</h3>
+        <form id="editForm" onsubmit="saveProfileData(event)">
+          
+          <div class="form-group">
+            <label for="inputName">Full Name</label>
+            <input type="text" id="inputName" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="inputFather">Father's Name</label>
+            <input type="text" id="inputFather" required>
+          </div>
+
+          <div class="form-group">
+            <label for="inputBrother">Brother's Name</label>
+            <input type="text" id="inputBrother" required>
+          </div>
+
+          <div class="form-group">
+            <label for="inputHouse">House / Address</label>
+            <input type="text" id="inputHouse" required>
+          </div>
+
+          <div class="modal-buttons">
+            <button type="button" class="cancel-btn" onclick="closeEditModal()">Cancel</button>
+            <button type="submit" class="save-btn">Save Changes</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="t.html" class="nav-item">
+      <span class="nav-icon">🏠</span>Home
+    </a>
+    <a href="explore.html" class="nav-item">
+      <span class="nav-icon">🔍</span>Explore
+    </a>
+    <a href="profile.html" class="nav-item active">
+      <span class="nav-icon">👤</span>Profile
+    </a>
+    <a href="connect.html" class="nav-item">
+      <span class="nav-icon">📞</span>Contact
+    </a>
+    <a href="setting.html" class="nav-item">
+      <span class="nav-icon">⚙️</span>Settings
+    </a>
+  </nav>
+
+  <script src="by.js"></script>
+  <script src="script.js"></script>
+</body>
+  </html>
