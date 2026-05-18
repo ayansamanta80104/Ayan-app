@@ -71,5 +71,5 @@ function saveProfileData(event) {
 
 function goBack() {
   if (document.referrer) { window.history.back(); } 
-  else { window.location.href = 't.html'; }
+  else { window.location.href = 'index.html'; }
     }
