@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="setting.css">
+</head>
+<body>
+
+  <div class="brightness-overlay" id="brightnessOverlay"></div>
+
+  <div class="settings-app">
+    
+    <header class="top-bar">
+      <button class="nav-btn-back" onclick="goBack()">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <h1 class="page-title">Settings</h1>
+      <div class="spacer"></div>
+    </header>
+
+    <main class="settings-content">
+      
+      <section class="settings-group">
+        <h2 class="group-title">Appearance & Display</h2>
+        <div class="group-card">
+          
+          <div class="settings-row item-slider">
+            <div class="row-meta">
+              <span class="row-label">Display Brightness</span>
+              <span id="brightnessValue" class="status-text">100%</span>
+            </div>
+            <div class="slider-wrapper">
+              <span class="slider-icon">🔅</span>
+              <input type="range" id="brightnessRange" min="20" max="100" value="100" class="pro-slider">
+              <span class="slider-icon">🔆</span>
+            </div>
+          </div>
+
+          <div class="settings-row item-palette">
+            <span class="row-label">Accent Theme</span>
+            <div class="color-options-grid">
+              <button class="theme-dot" style="--dot-color: #007aff;" onclick="changeThemeColor('#007aff', this)"></button>
+              <button class="theme-dot" style="--dot-color: #ff2d55;" onclick="changeThemeColor('#ff2d55', this)"></button>
+              <button class="theme-dot" style="--dot-color: #34c759;" onclick="changeThemeColor('#34c759', this)"></button>
+              <button class="theme-dot" style="--dot-color: #af52de;" onclick="changeThemeColor('#af52de', this)"></button>
+              <button class="theme-dot" style="--dot-color: #ff9500;" onclick="changeThemeColor('#ff9500', this)"></button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="settings-group">
+        <h2 class="group-title">System Information</h2>
+        <div class="group-card">
+          <div class="settings-row static-row">
+            <span class="row-label">Application</span>
+            <span class="row-value-static">Project Hub v1.0</span>
+          </div>
+          <div class="settings-row static-row">
+            <span class="row-label">Developer</span>
+            <span class="row-value-static">Ayan Samanta</span>
+          </div>
+          <div class="settings-row static-row">
+            <span class="row-label">Core Engine</span>
+            <span class="row-value-static">Supported by Gemini AI</span>
+          </div>
+        </div>
+        <p class="group-footer-note">This dashboard application environment is built using vanilla web layout modules.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="setting.js"></script>
+</body>
+        </html>
