@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Transparent Glassmorphism & Staggered Animation Engine
+   ========================================================================== */
+
+/* The Main Container Grid */
+.app-features-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width:800px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+/* 1. Base Setup: Transparent Glass Box Design with Initial Blur */
+.feature-card, .showcase-intro, .form-container {
+  /* Semi-transparent dark background */
+  background: rgba(30, 30, 47, 0.65),transparent; 
+  /* Blurs whatever background content is behind the box */
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* Soft elegant border and shadow */
+  border: 1px solid rgba(255, 255, 255, 0.12); 
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+  /* Animation Initial States */
+  opacity: 0;
+  filter: blur(15px); /* Content blur state */
+  transition: opacity 0.8s ease-out, 
+              filter 0.8s ease-out, 
+              transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.3s ease;
+  will-change: transform, opacity, filter;
+}
+.showcase-intro{
+  margin-top:10px;
+}
+/* 2. ODD numbered cards start from the LEFT */
+.feature-card:nth-child(odd),
+.showcase-intro {
+  transform: translateX(-60px) scale(0.95);
+}
+
+/* 3. EVEN numbered cards start from the RIGHT */
+.feature-card:nth-child(even) {
+  transform: translateX(60px) scale(0.95);
+}
+
+/* 4. Active State: Smoothly slides in and clears up */
+.scroll-animate.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0) translateY(0) scale(1);
+}
+
+/* Hover glow effect over the transparent box */
+.feature-card:hover {
+  border-color: #00d2ff;
+  box-shadow: 0 8px 32px 0 rgba(0, 210, 255, 0.15);
+}
+
+/* Text styling adjustments inside transparent boxes */
+.feature-card h3 {
+  color: #00d2ff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #e2e2e9;
+  line-height: 1.6;
+  margin: 0;
+  }
